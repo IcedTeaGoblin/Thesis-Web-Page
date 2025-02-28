@@ -264,7 +264,7 @@
 
         //The four interactive videos that will be used in the tutorial
         let video_sources = [
-            "./assets/mp4/pasta-disjointWith.mp4",
+            "./assets/mp4/pasta-disjointWithV2.mp4",
             "./assets/mp4/fruit-unionOf.mp4",
             "./assets/mp4/citizen-complementOf.mp4",
             "./assets/mp4/wine-intersectionOf.mp4",
@@ -284,13 +284,14 @@
             "IntersectionOf"]
 
         //All inner text blocks that will be used in the tutorial 
-        let tutorials = ["An ontology is like a detailed map of knowledge about a specific topic or domain. It organizes information by defining concepts, their properties, and how they relate to each other, much like a family tree or a blueprint."
-            + "Think of it as a way to make sure everyone understands the same ideas and relationships in the same way when discussing or working with complex information."
-            + "\n\nClasses = represent concepts or sets of instsances in the domain"
-            + "\n\nInstances = specific objects b elonging to respective Classes"
-            + "\n\nRelations = used to associate Classes, Instances, or any other entity within the ontology"
-            + "\n\nFor example, a 'Wine' class represents all wines that exist. The 'Wine' class can be defined with subclasses such as 'Red Wine', 'White Wine', and 'Rose Wine'. In other words, these subclasses have one shared superclass."
-            + "\n\nThe figure shows the relations between classes and instances in the wine domain. 'PinotNoir' class has one instance: 'MoutadamPinotNoir'. The 'Winery' class has two instances: 'Mountadam' and 'Elyse'. The 'FineFlavor' class has three instances: 'Delicate', 'Moderate' and 'Strong'. 'MountadamPinotNoir' is associated with two other instances ussing relations MadeFrom and 'HasFlavor'.",
+        let tutorials = ["In computer science, ontologies are used to capture and model knowledge in a domain of interest, and aim to define a common vocabulary for shared concepts in that doman and relations among them."
+            + "\n\nWhy would someone want to develop ontologies? To share common understanding of the structure of information, enable sharing and reuse of knowledge, make domain assumptions explicit, and to analyze domain knowledge."
+            + "\n\nOntologies are often made up of:"
+            + "\nClasses = represent concepts or sets of instsances in the domain"
+            + "\nInstances = specific objects belonging to respective Classes"
+            + "\nRelations = used to associate Classes, Instances, or any other entity within the ontology"
+            + "\n\nFor example, a 'Wine' class represents all wines that exist. The 'Wine' class can be defined with subclasses such as 'Red Wine', 'White Wine', and 'Rose Wine'. In other words, these subclasses have one shared superclass; which is the 'Wine' class. Alternatively, the 'Wine' class can be defined with 'Sparkling Wine' and 'Non-Sparkling Wine' subclasses. In this case, the superclass for both is the 'Wine' class."
+            + "\n\nThe figure shows the relations between classes and instances in the wine domain. 'PinotNoir' class has one instance: 'MoutadamPinotNoir'. The 'Winery' class has two instances: 'Mountadam' and 'Elyse'. The 'FineFlavor' class has three instances: 'Delicate', 'Moderate' and 'Strong'. 'MountadamPinotNoir' is associated with two other instances using relations MadeFrom and 'HasFlavor'.",
 
             "DisjointWith guarantees that an instance of one class cannot simultaneously be an instance of another specified class. "
             + "\n\nFor example, given two classes: 'Pasta' and 'Fruit', that are stated to be disjoint with each other, we can deduce that if A is an instance of 'Pasta', then A is not an instance of 'Fruit'."
@@ -480,7 +481,7 @@
                 "No, because 'PizzaBase' and 'PizzaTopping' are disjointWith one another"],
         },
         {
-            1: ["Any 'Pizza' that intersections 'SpicyTopping'",
+            1: ["Any 'Pizza' that intersects 'SpicyTopping'",
                 "Any 'PizzaTopping' that intersects 'Spiciness'",
                 "Any 'PizzaTopping' that intersects 'SpicyTopping'",
                 "Any 'SpicyTopping' that intersects 'Spiciness'"],
@@ -491,11 +492,11 @@
             3: ["DisjointWith",
                 "ComplementOf",
                 "UnionOf",
-                "IntersectionOf"],
-            4: ["DisjointWith",
-                "MeatTopping",
-                "UnionOf",
-                "IntersectionOf"],
+                "IntersectionOf'"],
+            4: ["'PizzaTopping'",
+                "'MeatTopping'",
+                "'VegetarianTopping'",
+                "'SpicyTopping'"],
             5: ["4","5","6","7"],
             6: ["DisjointWith",
                 "ComplementOf",
