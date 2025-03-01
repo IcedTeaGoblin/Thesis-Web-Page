@@ -45,8 +45,6 @@ To Run the Webpage, simply drag the file "ontology_study.html" into your browser
     }
   ]
 
-```
-
 ## 3. Start/Ending Recordings and Post Gaze Data Capturing
 
 WebGazer begins to record user gaze data from the first/start page of the questions + answers section of the study. It automatically stops recording and downloads the raw_gaze_data.csv file for you through the "downloadGazeDataCSV()" function (from eyetracking.js).
