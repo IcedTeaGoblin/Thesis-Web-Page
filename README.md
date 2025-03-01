@@ -87,6 +87,7 @@ How to run: `python3 gaze_conversion.py`
 
 This will produce fixations.csv containing fixation metrics and all_gaze_data.csv which contains the following headers:
 
+```
 MEDIA_ID
 MEDIA_NAME
 CNT
@@ -146,5 +147,6 @@ AOI
 SACCADE_MAG
 SACCADE_DIR
 VID_FRAME
+```
 
 Once the contents of the output are confirmed, raw_gaze_data.csv can be passed into BEACHGaze for further data processing. Please note that fixations.csv is not required to be passed into BEACHGaze.
