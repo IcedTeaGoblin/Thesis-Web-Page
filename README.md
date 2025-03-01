@@ -1,10 +1,10 @@
-##Visualization Ontology Study
+### Visualization Ontology Study
 
 This repository provides a complete solution for performing eye tracking with WebGazer.js, using a web browser and a webcam. The tool collects raw gaze data, allows users to define their own Areas of Interest (AOIs) through an interactive interface, and processes the data to extract fixation and saccade metrics. The following sections explain how to set up the environment, define AOIs, control recording, inspect raw results, and perform gaze data conversion (which converts the raw data into a format BEACHGaze expects)
 
 First clone the repository: `git clone https://github.com/IcedTeaGoblin/Thesis-Web-Page.git` and cd into the folder
 
-#1. Environment Setup
+## 1. Environment Setup
 
 1. Create a virtual environment: `python3 -m venv venv`
 
@@ -14,7 +14,7 @@ First clone the repository: `git clone https://github.com/IcedTeaGoblin/Thesis-W
 
 To Run the Webpage, simply drag the file "ontology_study.html" into your browser. The repository uses WebGazer.js to capture gaze data, so make sure your webcam is enabled and the browser has permissions to access it. Check the browser's developer console for initialization messages.
 
-#2. Defining AOIs
+## 2. Defining AOIs
 
 Users can define areas of interest by pressing Ctrl + Z and dragging + dropping to create boxes. After creating your boxes, press Ctrl + X to save and download them into a file titled "aoi_config.json"
 
@@ -37,7 +37,7 @@ Here is a sample AOI configuration output to showcase what an AOI box looks like
   }
 ]
 
-#3. Start/Ending Recordings and Post Gaze Data Capturing
+## 3. Start/Ending Recordings and Post Gaze Data Capturing
 
 WebGazer begins to record user gaze data from the first/start page of the questions + answers section of the study. It automatically stops recording and downloads the raw_gaze_data.csv file for you through the "downloadGazeDataCSV()" function (from eyetracking.js).
 
@@ -58,7 +58,7 @@ x,y,TIME(YYYY/MM/DD HH:MM:SS.sss),TIMETICK(f=10000000)
 
 This raw file is used as input for the gaze conversion process
 
-#4. Gaze Conversion
+## 4. Gaze Conversion
 
 The "gaze_conversion.py" script processes the raw gaze data into a format which BEACHGaze takes in as input. This script performs several steps:
 
