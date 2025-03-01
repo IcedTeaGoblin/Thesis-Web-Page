@@ -1,8 +1,13 @@
-### Visualization Ontology Study
+# Visualization Ontology Study
 
-This repository provides a complete solution for performing eye tracking with WebGazer.js, using a web browser and a webcam. The tool collects raw gaze data, allows users to define their own Areas of Interest (AOIs) through an interactive interface, and processes the data to extract fixation and saccade metrics. The following sections explain how to set up the environment, define AOIs, control recording, inspect raw results, and perform gaze data conversion (which converts the raw data into a format BEACHGaze expects)
+This repository provides a complete solution for performing eye tracking with **WebGazer.js** using a web browser and a webcam. The tool collects raw gaze data, allows users to define their own Areas of Interest (AOIs) through an interactive interface, and processes the data to extract fixation and saccade metrics. It also converts the raw data into a format that **BEACHGaze** expects.
 
-First clone the repository: `git clone https://github.com/IcedTeaGoblin/Thesis-Web-Page.git` and cd into the folder
+**First, clone the repository and navigate to the project folder:**
+
+```bash
+git clone https://github.com/IcedTeaGoblin/Thesis-Web-Page.git
+cd Thesis-Web-Page
+```
 
 ## 1. Environment Setup
 
@@ -16,26 +21,31 @@ To Run the Webpage, simply drag the file "ontology_study.html" into your browser
 
 ## 2. Defining AOIs
 
-Users can define areas of interest by pressing Ctrl + Z and dragging + dropping to create boxes. After creating your boxes, press Ctrl + X to save and download them into a file titled "aoi_config.json"
+- **Defining Areas:**
+  - Press **Ctrl + Z** to start.
+  - Drag and drop to create boxes.
+  - Press **Ctrl + X** to save as **aoi_config.json**.
 
-Here is a sample AOI configuration output to showcase what an AOI box looks like:
+- **Sample AOI Configuration Output:**
+  ```json
+  [
+    {
+      "x": 100,
+      "y": 200,
+      "width": 300,
+      "height": 150,
+      "label": "AOI_1"
+    },
+    {
+      "x": 500,
+      "y": 100,
+      "width": 250,
+      "height": 200,
+      "label": "AOI_2"
+    }
+  ]
 
-[
-  {
-    "x": 100,
-    "y": 200,
-    "width": 300,
-    "height": 150,
-    "label": "AOI_1"
-  },
-  {
-    "x": 500,
-    "y": 100,
-    "width": 250,
-    "height": 200,
-    "label": "AOI_2"
-  }
-]
+```
 
 ## 3. Start/Ending Recordings and Post Gaze Data Capturing
 
@@ -47,10 +57,12 @@ For recording stop, the "stopMainTracking() function in eyetracking.js is respon
 
 An example raw data file will have the following headers and values:
 
+```
 x,y,TIME(YYYY/MM/DD HH:MM:SS.sss),TIMETICK(f=10000000)
 808.1283,453.9446,0.00000,48860001560
 773.8807,537.9750,0.26120,48860065596
 775.2518,542.1353,0.53100,48860134931
+```
 
 * "x" and "y" - Screen coordinates of the gaze
 * TIME(...) - Normalized time in seconds (the first value is set to zero)
